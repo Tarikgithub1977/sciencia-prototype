@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre cours est prêt ! - SciencIA</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Scienc<span class="highlight">IA</span></span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="generate.html" class="nav-link">Nouveau cours</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="result-header">
+                <h1 class="page-title">✅ Votre cours est prêt !</h1>
+                <p class="page-subtitle">Voici le cours généré selon vos critères. Vous pouvez l'exporter ou le modifier.</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Niveau :</span>
+                        <span id="resultLevel" class="meta-value">Lycée</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Matière :</span>
+                        <span id="resultSubject" class="meta-value">Mathématiques</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Sujet :</span>
+                        <span id="resultTopic" class="meta-value">Les équations du second degré</span>
+                    </div>
+                </div>
+
+                <div id="courseContent" class="course-content">
+                    <!-- Le contenu du cours sera inséré ici par JavaScript -->
+                </div>
+
+                <div class="result-actions">
+                    <button id="downloadBtn" class="btn btn-primary">📥 Télécharger le cours</button>
+                    <button id="shareBtn" class="btn btn-secondary">📤 Partager</button>
+                    <button id="regenerateBtn" class="btn btn-outline">🔄 Régénérer</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2026 SciencIA. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
