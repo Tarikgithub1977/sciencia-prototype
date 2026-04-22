@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générer un cours - SciencIA</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Scienc<span class="highlight">IA</span></span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="#" class="nav-link">Fonctionnalités</a>
+                <a href="#" class="nav-link">Tarifs</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="page-title">Générer un cours scientifique</h1>
+            <p class="page-subtitle">Remplissez les champs ci-dessous pour créer votre cours personnalisé.</p>
+
+            <form id="courseForm" class="course-form">
+                <!-- Niveau -->
+                <div class="form-group">
+                    <label for="level" class="form-label">Niveau *</label>
+                    <select id="level" class="form-select" required>
+                        <option value="" disabled selected>Sélectionnez un niveau</option>
+                        <option value="college">Collège</option>
+                        <option value="lycee">Lycée</option>
+                        <option value="universite">Université</option>
+                        <option value="formation-pro">Formation Professionnelle</option>
+                    </select>
+                </div>
+
+                <!-- Matière -->
+                <div class="form-group">
+                    <label for="subject" class="form-label">Matière *</label>
+                    <div class="subject-options">
+                        <label class="subject-option">
+                            <input type="radio" name="subject" value="maths" required>
+                            <span class="subject-label">📐 Mathématiques</span>
+                        </label>
+                        <label class="subject-option">
+                            <input type="radio" name="subject" value="physique" required>
+                            <span class="subject-label">⚡ Physique</span>
+                        </label>
+                        <label class="subject-option">
+                            <input type="radio" name="subject" value="chimie" required>
+                            <span class="subject-label">🧪 Chimie</span>
+                        </label>
+                        <label class="subject-option">
+                            <input type="radio" name="subject" value="biologie" required>
+                            <span class="subject-label">🌱 Biologie</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Sujet -->
+                <div class="form-group">
+                    <label for="topic" class="form-label">Sujet du cours *</label>
+                    <input type="text" id="topic" class="form-input" placeholder="Ex: Les équations du second degré, La photosynthèse, Les lois de Newton" required>
+                </div>
+
+                <!-- Format -->
+                <div class="form-group">
+                    <label for="format" class="form-label">Format de sortie *</label>
+                    <select id="format" class="form-select" required>
+                        <option value="" disabled selected>Sélectionnez un format</option>
+                        <option value="pdf">PDF</option>
+                        <option value="word">Word (DOCX)</option>
+                        <option value="ppt">PowerPoint (PPTX)</option>
+                        <option value="markdown">Markdown</option>
+                    </select>
+                </div>
+
+                <!-- Options avancées -->
+                <div class="advanced-options">
+                    <h3 class="advanced-title">Options avancées</h3>
+                    <div class="form-group">
+                        <label for="language" class="form-label">Langue</label>
+                        <select id="language" class="form-select">
+                            <option value="fr">Français</option>
+                            <option value="ar">Arabe</option>
+                            <option value="en">Anglais</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration" class="form-label">Durée estimée du cours</label>
+                        <select id="duration" class="form-select">
+                            <option value="short">Court (10-15 min)</option>
+                            <option value="medium" selected>Moyen (30-45 min)</option>
+                            <option value="long">Long (1h+)</option>
+                        </select>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeExercises">
+                            <span>Inclure des exercices</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeSummary">
+                            <span>Inclure un résumé</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="includeQCM">
+                            <span>Inclure un QCM</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Bouton de génération -->
+                <button type="submit" class="btn btn-primary btn-large btn-generate">
+                    <span class="btn-text">Générer le cours</span>
+                    <span class="btn-loading">⏳ Génération en cours...</span>
+                </button>
+            </form>
+
+            <!-- Zone d'aperçu -->
+            <div id="previewSection" class="preview-section" style="display: none;">
+                <h2 class="preview-title">Aperçu du cours</h2>
+                <div id="coursePreview" class="course-preview"></div>
+                <div class="preview-actions">
+                    <button id="exportBtn" class="btn btn-secondary">Exporter le cours</button>
+                    <button id="editBtn" class="btn btn-outline">Modifier</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2026 SciencIA. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
